@@ -2,9 +2,9 @@
 <?php
 include('connection.php');
 $num1 = $_POST["search"];
+//getting data by live search from database
 $databaseData = "SELECT * FROM name WHERE name LIKE '{$num1}%'";
 $result = $connection->query($databaseData);
-//$row=$result->fetch_assoc();
 $serial = 1;
 ?>
 <table class="table table-hover table-dark" style="border-radius: 20px;">
@@ -13,6 +13,7 @@ $serial = 1;
         <th style="text-align:center;border:0;">NAME</th>
     </tr>
 <?php
+//showing data one by one
     while ($data = $result->fetch_assoc()) {
 ?>
     <tr >

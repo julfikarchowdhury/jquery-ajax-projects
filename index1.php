@@ -16,6 +16,7 @@
 
         <div style="width:50%;margin: 0 auto;">
             <h2>Jquery form</h2>
+            <!-- form to submit multiple data in database together -->
             <form action="insertData.php" method="post" style="border: 1px solid black;padding:50px;">
                 <div class="row">
                     <div class="form-group col-10" id="new_feild">
@@ -43,9 +44,13 @@
         </div>
     </div>
     <div class="container" style="margin-top:50px;">
+        <!-- searchbar -->
         <div style="width:50%;margin:auto;">
-            <input type="search" id="searchbar" class="form-control" style="width:50%;float:right;margin-bottom:20px;margin-right:5px;" placeholder="Search">
+            <input type="search" id="searchbar" class="form-control" 
+            style="width:50%;float:right;margin-bottom:20px;margin-right:5px;" 
+            placeholder="Search">
         </div>
+        <!-- showing data in table -->
         <div class="searchdata" style="width:50%;margin: 0 auto;">
         </div>
     </div>

@@ -1,9 +1,8 @@
 <?php
     include('connection.php');
-
+//showing all data from database
     $databaseData = "SELECT * FROM name";
     $result = $connection->query($databaseData);
-    //$row=$result->fetch_assoc();
     $serial = 1;
 ?>
     <table class="table table-hover table-dark" style="border-radius: 20px;">

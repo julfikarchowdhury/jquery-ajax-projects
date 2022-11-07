@@ -1,6 +1,8 @@
 <?php
 $num1 = $_POST["name"];
+//connection mysql
 include('connection.php');
+//inserting data in database
 if($connection){
     foreach($num1 as $num){
         $num=$num;
