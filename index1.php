@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
 </head>
 
 <body>
@@ -16,26 +16,28 @@
 
         <div style="width:50%;margin: 0 auto;">
             <h2>Jquery form</h2>
-            <!-- form to submit multiple data in database together -->
-            <form action="insertData.php" method="post" style="border: 1px solid black;padding:50px;">
+            <!-- form to submit multiple data in database together -->       
+            <form action="insertData.php" method="post" style="border: 1px solid black;padding:50px;border-radius: 20px;">
                 <div class="row">
-                    <div class="form-group col-10" id="new_feild">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name[]">
+                    
+                    <div class="mb-3 col-10"  id="new_feild">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control x" id="name" placeholder="Enter name"  name="name[]">
                     </div>
 
-                    <div class="col-2 pt-4">
-                        <button type="button" id="add_btn" class="btn btn-outline-success form-control mt-2">
+                    <div class="mb-3 col-2 pt-4">
+                        <button type="button" id="add_btn" class="btn btn-outline-success form-control mt-2" >
                             <i class="fa fa-plus"></i>
                         </button>
                     </div>
+                    <div><b></b><p style="color:red;padding-left:10px;" class="validation"></p></b></div>
                 </div>
                 <div class="row more-input">
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div style="text-align: center;">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" id="submit" class="btn btn-primary" style="padding-top:10px;" disabled>Submit</button>
                         </div>
                     </div>
                 </div>
@@ -51,10 +53,16 @@
             placeholder="Search">
         </div>
         <!-- showing data in table -->
-        <div class="searchdata" style="width:50%;margin: 0 auto;">
-        </div>
+        <table class="table table-hover table-dark mb-3" style="width:50%;margin:auto;">
+            <thead><tr>
+                <th style="text-align:center;" class="col-2">SL.</th>
+                <th style="text-align:center;" class="col-10">NAME</th>
+            </tr></thead>
+            <tbody class="searchdata" >
+            </tbody>
+        </table>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>

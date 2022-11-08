@@ -6,14 +6,9 @@ $num1 = $_POST["search"];
 $databaseData = "SELECT * FROM name WHERE name LIKE '{$num1}%'";
 $result = $connection->query($databaseData);
 $serial = 1;
-?>
-<table class="table table-hover table-dark" style="border-radius: 20px;">
-    <tr>
-        <th style="text-align:center;border:0;">SL.</th>
-        <th style="text-align:center;border:0;">NAME</th>
-    </tr>
-<?php
+
 //showing data one by one
+if(mysqli_num_rows($result)>0){
     while ($data = $result->fetch_assoc()) {
 ?>
     <tr >
@@ -25,7 +20,13 @@ $serial = 1;
         </td>
     </tr>
 <?php 
-    }
+    }}
+    else{ ?>
+        <tr>
+        <td colspan="2" style="text-align: center;padding:20px"><b>Oops!</b> No match found.</td>
+        </tr>
+<?php
+   }
 ?> 
-    </table> 
+    
 

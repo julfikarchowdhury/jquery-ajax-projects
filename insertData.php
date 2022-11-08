@@ -14,7 +14,7 @@ if($connection){
 
 }
 // 
-header("Location: http://localhost/jqueryprojects/index1.php");
+header("Location: http://localhost/jquery-ajax-projects/index1.php");
 exit();
 //print_r($num)
 ?>
